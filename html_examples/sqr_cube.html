@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Cube</title>
+</head>
+
+<style>
+    div>div {
+            margin:0px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            margin-left: 50px;
+            padding: 10px;
+            background-color: #d8e2e280;
+            
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        button {
+            width: 120px;
+            height: 40px;
+            margin-top: 8px;
+            background-color: rgb(223, 182, 105);
+            border:2px solid black;
+            border-radius: 10px;
+        }
+</style>
+<body>
+    <div>
+        <div>
+            <label for="inputNumber"> Input Number </label>
+            <input type="text" id="inputNumber">
+        </div>
+        <div>
+            <p>Output</p>
+            <label id="outputLabel" for="inputNumber"> Output Textbox </label>
+            <input type="text" id="output">
+        </div>
+        <div>
+            <button onclick="checkSquare()"> Square </button>
+            <button onclick="checkCube()"> Cube </button>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        function checkSquare() {
+            let number = parseInt(document.getElementById("inputNumber").value)
+            let square = number * number
+            document.getElementById("output").value = square
+            document.getElementById("outputLabel").textContent = "Square Number"
+        }
+
+        function checkCube() {
+            let number = parseInt(document.getElementById("inputNumber").value)
+            let cube = number * number * number
+            document.getElementById("output").value = cube
+            document.getElementById("outputLabel").textContent = "Cube Number"
+        }
+    </script>
+</body>
+</html>
